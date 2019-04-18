@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>lOGIN</h3>
+    <input type="email" placeholder="Email" id="email_field" />
+    <input type="password" placeholder="Password" id="password_field" />
+
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+
+    <h1>Contact us</h1>
+
+    <div class="container">
+   
+      <div class="wrapper">
+        
+        <div class="contact">
+          <h3>Contact Us</h3>
+          <form id="contactForm">
+            <p>
+              <label>First Name</label>
+              <input type="text" name="firstname" id="firstname" required>
+            </p>
+            <p>
+              <label>Last Name</label>
+              <input type="text" name="lastname" id="lastname" required>
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone" required>
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  <button onclick="logout()">Logout</button>
+  </div>
+  
+  
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<script>
+  // Initialize Firebases
+  var config = {
+  apiKey: "AIzaSyCQuCFhT-5jUajOTKBr4a8guVYD2ukoqnw",
+  authDomain: "contactform-cfbbd.firebaseapp.com",
+  databaseURL: "https://contactform-cfbbd.firebaseio.com",
+  projectId: "contactform-cfbbd",
+  storageBucket: "contactform-cfbbd.appspot.com",
+  messagingSenderId: "1019465467276"
+};
+firebase.initializeApp(config);
+</script>
+<script>
+</script>
+<script src="index.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
